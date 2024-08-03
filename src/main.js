@@ -1,6 +1,7 @@
 "use strict"
 
-//CSS
-import "./styles/global.css"
+//Configuração do dayjs
+import "./libs/dayjs.js";
 
-console.log("Hello World!")
+//CSS
+import "./styles/global.css";
