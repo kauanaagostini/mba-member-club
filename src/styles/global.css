@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-gradient: linear-gradient(90deg, #2DAA6E 0%, #2DAAAA 33.33%, #856CCF 66.67%, #D658B3 100%);
+  --brand-color-primary: #D658B3;
+  --brand-color-secondary: #45B442;
+
+  --bg-color-primary: #E9E7E9; /*gray 200*/
+  --bg-color-secondary: #756C71; /*gray 500*/
+  --bg-color-terciary: #F4F1F2; /*gray 100*/
+
+  --text-color-secondary: #4A4448; /*gray 600*/
+  --text-color-primary: #756C71; /*gray 500*/
+
+  --font-family: "Oxygen", sans-serif;
+  --fw-base: 400;
+  --fw-bold: 700;
+  --font-height: 140%;
+
+  --text-md: var(--fw-base) 1rem/var(--font-height) var(--font-family);
+  --text-sm: var(--fw-base) 0.875rem/var(--font-height) var(--font-family);
+  --text-xs: var(--fw-base) 0.75rem/var(--font-height) var(--font-family);
+
+  --title-md: var(--fw-bold) 1.5rem/var(--font-height) var(--font-family);
+  --title-sm: var(--fw-bold) 1.125rem/var(--font-height) var(--font-family);
+
+  --subtitle-md: small-caps var(--fw-bold) 0.875rem/var(--font-height) var(--font-family);
+  --subtitle-sm: small-caps var(--fw-bold) 0.75rem/var(--font-height) var(--font-family);
+}
+
+html{
+  font-family: var(--font-family);
+  color: var(--text-color-primary);
+
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color-primary);
+  overflow-x: hidden;
+}
