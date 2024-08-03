@@ -1,0 +1,44 @@
+#input-info{
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.75rem;
+    background-color: #DFDCDF;
+    gap: 0.75rem;
+    border: solid 1px #D3CFD2;
+    padding-block: 0.5rem;
+    padding-inline: 0.5rem;
+  }
+
+  & input {
+    background-color: inherit;
+    border: none;
+    font: var(--text-md);
+    margin-left: 0.5rem;
+  }
+
+  & input:focus-visible{
+    outline: none;
+  }
+
+  & button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #332B31;
+    padding: 0.625rem;
+  }
+}
+
+@media (width >= 80rem) {
+  #input-info {
+    display: flex;
+    justify-content: center;
+    & div{
+      width: 25rem;
+    }
+  }
+}

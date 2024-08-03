@@ -1,0 +1,19 @@
+header {
+  margin-inline: auto;
+  text-align: center;
+  margin-top: 2rem;
+
+  & img {
+    width: 6.22rem;
+  }
+}
+
+@media (width >= 80rem) {
+  header {
+    margin-top: 4rem;
+
+    & img {
+      width: 7.25rem;
+    }
+  }
+}

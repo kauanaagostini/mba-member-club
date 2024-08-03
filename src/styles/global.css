@@ -10,8 +10,7 @@
   --brand-color-secondary: #45B442;
 
   --bg-color-primary: #E9E7E9; /*gray 200*/
-  --bg-color-secondary: #756C71; /*gray 500*/
-  --bg-color-terciary: #F4F1F2; /*gray 100*/
+  --bg-color-secondary: #F4F1F2; /*gray 100*/
 
   --text-color-secondary: #4A4448; /*gray 600*/
   --text-color-primary: #756C71; /*gray 500*/
@@ -42,4 +41,20 @@ html{
 body {
   background-color: var(--bg-color-primary);
   overflow-x: hidden;
+}
+
+.px-lg{
+  padding-inline: 0.75rem;
+}
+
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - 0.75rem * 2);
+  margin-inline: auto;
+}
+
+@media (width >= 80em){
+  .container{
+    --max-width: 80rem;
+  }
 }
