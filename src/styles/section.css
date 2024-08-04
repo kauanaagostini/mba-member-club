@@ -1,0 +1,174 @@
+.container {
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - 0.75rem * 2);
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.card-container {
+  background-color: var(--bg-color-secondary);
+  border-radius: 1rem;
+  border: solid 1px #DFDCDF;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content{
+  gap: 1rem;
+}
+
+#card-user-info{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+#user-info{
+  & h1{
+    font: var(--title-sm);
+    color: var(--text-color-secondary);
+  }
+
+  & p{
+    font: var(--text-xs);
+  }
+}
+
+.user-avatar{
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
+  padding: 1.5px;
+
+  & .user-image{
+    
+    & img{
+      width: 3.5rem;
+      height: 3.5rem;
+      object-fit: cover;
+      border-radius: 0.625rem;
+      border: solid 3px var(--bg-color-secondary);
+    }
+  }
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      315deg,
+      #2DAA6E 0%,
+      #2DAAAA 33.33%,
+      #856CCF 66.67%,
+      #D658B3 100%
+    );
+    position: absolute;
+    inset: 0;
+    border-radius: 0.625rem;
+    z-index: -1;
+  }
+}
+
+.card-member-info{
+  display: flex;
+  gap: 1rem;
+
+  & .card-header{
+    & h2 {
+      font: var(--subtitle-sm);
+      text-transform: uppercase;
+    }
+    & p{
+      font: var(--text-xs);
+    }
+  }
+
+  & .card-tag{
+    font: var(--subtitle-sm);
+    text-transform: uppercase;
+    
+    & p {
+      background-color: #DFDCDF;
+      width: 7.6875rem;
+      border-radius: 62.4375rem;
+      padding: 0.21875rem 0.5rem;
+    }
+  }
+}
+
+.card-member-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3.5rem, 1fr));
+  gap: 0.5rem;
+  justify-items: center;
+}
+
+.card-member-inner{
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--bg-color-primary);
+  border-radius: 0.786rem;
+
+  & img {
+    width: 71.5%;
+    height: 71.5%;
+  }
+}
+
+.checked {
+  background-image: url(../assets/icons/pin-check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.last-card{
+  background-image: url(../assets/icons/gift.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-progress{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.progress-info{
+  & span{
+    font: var(--text-sm);
+
+    & strong {
+      font: var(--title-md);
+      color: var(--text-color-secondary);
+    }
+  }
+
+  & p {
+    font: var(--text-xs);
+  }
+}
+
+.pin-gift-progress{
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--bg-color-primary);
+  background-image: url(../assets/icons/pin-gift.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+
+
+@media (width >= 80em){
+  .container{
+    --max-width: 80rem;
+  }
+}
