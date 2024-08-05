@@ -3,6 +3,9 @@
 //Configuração do dayjs
 import "./libs/dayjs.js";
 
+//JS
+import "./modules/input.js";
+
 //CSS
 import "./styles/global.css";
 import "./styles/header.css";
