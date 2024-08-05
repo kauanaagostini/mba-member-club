@@ -1,5 +1,6 @@
 import { userFetchById } from "../services/user-fetch-by-id.js";
 import { createMemberCardId, createMemberCards } from "./card-member.js";
+import { createProgressBar } from "./card-progress.js";
 import { createUserInfo } from "./user-info.js";
 
 const inputId = document.getElementById("user-id");
@@ -29,6 +30,7 @@ inputButton.addEventListener("click", async (event) => {
   createUserInfo({ userName:userInfo.name, clientSince:userInfo.clientSince });
   createMemberCardId({ userId:userInfo.id});
   createMemberCards({ loyaltyCard:userInfo.loyaltyCard});
+  createProgressBar({loyaltyCard: userInfo.loyaltyCard});
   inputId.value = "";
 
 })
