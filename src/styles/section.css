@@ -45,39 +45,29 @@
 .user-avatar{
   width: 3.5rem;
   height: 3.5rem;
-  position: relative;
   padding: 1.5px;
+  background: linear-gradient(
+    315deg,
+    #2DAA6E 0%,
+    #2DAAAA 33.33%,
+    #856CCF 66.67%,
+    #D658B3 100%
+  );
+  border-radius: 0.625rem;
 
-  & .user-image{
-    
-    & img{
-      width: 3.5rem;
-      height: 3.5rem;
-      object-fit: cover;
-      border-radius: 0.625rem;
-      border: solid 3px var(--bg-color-secondary);
-    }
-  }
-
-  &::before {
-    content: "";
-    background: linear-gradient(
-      315deg,
-      #2DAA6E 0%,
-      #2DAAAA 33.33%,
-      #856CCF 66.67%,
-      #D658B3 100%
-    );
-    position: absolute;
-    inset: 0;
+  & img{
+    width: calc(3.5rem - 1.5px * 2);
+    height: calc(3.5rem - 1.5px * 2);
+    object-fit: cover;
     border-radius: 0.625rem;
-    z-index: -1;
+    border: solid 1.5px var(--bg-color-secondary);
   }
 }
 
 .card-member-info{
   display: flex;
   gap: 1rem;
+  justify-content: space-between;
 
   & .card-header{
     & h2 {
@@ -95,9 +85,10 @@
     
     & p {
       background-color: #DFDCDF;
-      width: 7.6875rem;
+      width: 8.6875rem;
       border-radius: 62.4375rem;
       padding: 0.21875rem 0.5rem;
+      text-align: center;
     }
   }
 }
@@ -114,11 +105,6 @@
   height: 3.5rem;
   background-color: var(--bg-color-primary);
   border-radius: 0.786rem;
-
-  & img {
-    width: 71.5%;
-    height: 71.5%;
-  }
 }
 
 .checked {
@@ -138,6 +124,31 @@
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+}
+
+.content-progress {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.progress-bar{
+  width: 11.375rem;
+  height: 0.5rem;
+  border-radius: 625rem;
+  background-color: #DFDCDF;
+}
+
+.progress-bar div {
+  height: 100%;
+  border-radius: 625rem;
+  background: linear-gradient(
+    90deg, 
+    #2DAA6E 0%, 
+    #2DAAAA 33.33%, 
+    #856CCF 66.67%, 
+    #D658B3 100%
+  );
 }
 
 .progress-info{
@@ -165,10 +176,114 @@
   border-radius: 50%;
 }
 
+.card-records{
+  margin-bottom: 1rem;
+  & header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+    & h2{
+      font: var(--subtitle-sm);
+      text-transform: uppercase;
+    }
+
+    & p{
+      font: var(--text-xs);
+    }
+  }
+
+  & ul {
+    list-style: none;
+    margin-top: 0.75rem;
+  }
+}
+
+.card-records ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
+.list-info strong {
+  font: var(--subtitle-sm);
+  text-transform: uppercase;
+}
+
+.list-info span {
+  font: var(--text-xs);
+}
+
+.list-img {
+  background-color: rgb(69 180 66 / 12%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.lits-img img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
 
 
 @media (width >= 80em){
   .container{
     --max-width: 80rem;
+  }
+
+  .grid{
+    grid-template-areas: 
+    "A B B"
+    "D B B"
+    "D B B"
+    "D C C";
+
+    row-gap: 1rem;
+    column-gap: 1.5rem;
+    margin-top: 4rem;
+    max-width: 57rem;
+  }
+
+  #card-user-info{
+    grid-area: A;
+    margin-top: 0;
+  }
+
+  .card-content{
+    grid-area: B;
+  }
+
+  .card-progress{
+    grid-area: C;
+  }
+
+  .card-records{
+    grid-area: D;
+    margin-bottom: 0;
+  }
+
+  .card-member-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(5.5rem, 1fr));
+    gap: 1rem;
+  }
+
+  .card-member-inner{
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .checked {
+    background-image: url(../assets/icons/pin-check-lg.svg);
+  }
+
+  .last-card{
+    background-image: url(../assets/icons/gift-lg.svg);
   }
 }

@@ -15,7 +15,7 @@
   </header>
   <section id="input-info" class="container">
     <div>
-      <input type="text" placeholder="ID do cartão">
+      <input id="user-id" type="text" maxlength="15" autocomplete="off" placeholder="ID do cartão">
       <button>
         <img src="./src/assets/icons/seta.svg" alt="Botão para buscar ID">
       </button>
@@ -25,13 +25,12 @@
   <section class="container grid">
     <section class="card-container padding-user" id="card-user-info">
       <div class="user-avatar">
-        <div class="user-image">
+        <!-- fazer o contorno colorido da foto -->
           <img src="./src/assets/users-images/profile-pic.jpg" alt="Avatar do usuário">
-        </div>
       </div>
       <div id="user-info">
-        <h1>Natália Miranda</h1>
-        <p>Cliente desde 18/09/2023</p>
+        <h1>Nome do Usuário</h1>
+        <p>Cliente desde ...</p>
       </div>
 
     </section>
@@ -42,16 +41,14 @@
           <h2>cartão fidelidade</h2>
           <p>Ao fazer cortes de cabelo, o décimo sai de graça!</p>
         </div>
-        <div class="card-tag">
-          <p>ID: 124-537-835-230</p>
+        <div class="card-tag" id="card-member-id">
+          <p>ID: 000-000-000-000</p>
         </div>
       </div>
       <div class="card-member-wrapper">
-        <div class="card-member-inner checked">
+        <div class="card-member-inner">
         </div>
-        <div class="card-member-inner checked">
-        </div>
-        <div class="card-member-inner checked">
+        <div class="card-member-inner">
         </div>
         <div class="card-member-inner">
         </div>
@@ -68,12 +65,46 @@
 
     <section class="card-container card-progress padding-progress">
       <div class="progress-info">
-        <span><strong>3</strong> cortes restantes</span>
-        <p>7 de 10</p>
+        <span><strong>0</strong> cortes restantes</span>
+         <div class="content-progress">
+           <div class="progress-bar">
+             <div></div>
+           </div>
+           <p>0 de 0</p>
+         </div>
       </div>
       <div class="pin-gift-progress">
       </div>
     </section>
+
+    <section class="card-container card-records padding-card-member">
+      <header>
+        <h2>histórico</h2>
+        <p>7 cortes</p>
+      </header>
+      <!-- colocar o risco separando o header da lista -->
+      <ul>
+        <li>
+          <div class="list-info flex-column">
+            <strong>29/04/2024</strong>
+            <span>18:30</span>
+          </div>
+          <div class="list-img">
+            <img src="./src/assets/icons/check.svg" alt="">
+          </div>
+        </li>
+        <li>
+          <div class="list-info flex-column">
+            <strong>28/04/2024</strong>
+            <span>18:00</span>
+          </div>
+          <div class="list-img">
+            <img src="./src/assets/icons/check.svg" alt="">
+          </div>
+        </li>
+      </ul>
+    </section>
+
   </section>
 </body>
 </html>
