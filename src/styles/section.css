@@ -154,11 +154,11 @@
 .progress-info{
   & span{
     font: var(--text-sm);
+  }
 
-    & strong {
-      font: var(--title-md);
-      color: var(--text-color-secondary);
-    }
+  & strong {
+    font: var(--title-sm);
+    color: var(--text-color-secondary);
   }
 
   & p {
@@ -285,5 +285,38 @@
 
   .last-card{
     background-image: url(../assets/icons/gift-lg.svg);
+  }
+
+  .progress-info{
+  
+    & strong {
+      font: var(--title-md);
+    }
+  
+    & span {
+      font: var(--text-md);
+    }
+  }
+
+  .progress-bar{
+    width: 21.9375rem;
+  }
+
+  .card-records-scrollbar {
+    max-height: 20rem;
+    overflow-y: auto;
+  }
+  .card-records-scrollbar::-webkit-scrollbar-track {
+    background-color: var(--bg-color-secondary);
+    border-radius: 1.2rem;
+  }
+  .card-records-scrollbar::-webkit-scrollbar {
+      width: 1.75rem;
+  }
+  .card-records-scrollbar::-webkit-scrollbar-thumb {
+    width: 0.375rem;
+    background: #DFDCDF;
+    border-radius: 62.4375rem;
+    border: solid 0.6875rem var(--bg-color-secondary)
   }
 }
