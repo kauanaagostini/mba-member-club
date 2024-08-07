@@ -56,14 +56,16 @@ Das funcionalidades descritas acima a unica que ficou para próxima versão foi 
 Abaixo os alerts de validação de ID inválido, primeiro digitando um valor menor do que esperado no campo input, e também ao informar um ID inexistente no campo.
 
 <div align="center">
-  <img src="./src/assets/readme/id-invalido-digitos.png" width="150px"/>
-  <img src="./src/assets/readme/id-invalido-banco.png" width="150px"/>  
+  <img src="./src/assets/readme/id-invalido-digitos.png" width="300px"/>
+  <img src="./src/assets/readme/id-invalido-banco.png" width="300px"/>  
 </div>
 
 E como ficou as versões WEB e Mobile:
 <div align="center">
-  <img src="./src/assets/readme/id-valido-web.png" width="300px"/>
-  <img src="./src/assets/readme/id-valido-mobile.png" width="300px"/>  
+  <img src="./src/assets/readme/id-valido-web.png" width="500px"/>
+</div>
+<div align="center">
+  <img src="./src/assets/readme/id-valido-mobile.png" height="500px"/>
 </div>
 
 
